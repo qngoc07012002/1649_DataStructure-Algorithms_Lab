@@ -10,7 +10,6 @@ public class Stack<E> implements AbstractStack<E> {
 
     private static class Node<E>{
         private E element;
-        private Node<E> next;
         private Node<E> previous;
 
         public Node(E value) {
