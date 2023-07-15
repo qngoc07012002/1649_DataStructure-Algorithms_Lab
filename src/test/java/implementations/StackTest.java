@@ -7,11 +7,11 @@ import static org.junit.Assert.*;
 
 public class StackTest {
 
-    private Stack<String> stack;
+    private Stack2<String> stack;
 
     @Before
     public void setUp() {
-        this.stack = new Stack<>();
+        this.stack = new Stack2<>();
         for (int i = 0; i < 100; i++) {
             stack.push(String.valueOf(i));
         }
