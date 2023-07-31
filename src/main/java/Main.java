@@ -5,7 +5,8 @@ import java.util.Iterator;
 public class Main {
     public static void main(String[] args) {
       //  testStack();
-        testQueue();
+       // testQueue();
+        testDLL();
     }
 
     public static void testStack(){
@@ -68,5 +69,35 @@ public class Main {
         }
     }
 
+    public static void testDLL(){
+        DoublyLinkedList<Integer> dll = new DoublyLinkedList<>();
+
+        dll.insertLast(10);
+        dll.insertLast(20);
+        dll.insertFirst(5);
+        dll.insertAfter(dll.getNode(1), 15);
+
+        System.out.println("Display Forward:");
+        dll.displayForward();
+
+        System.out.println("Display Backward:");
+        dll.displayBackward();
+
+        dll.removeFirst();
+        dll.removeAtIndex(1);
+
+        System.out.println("After removing first and second elements:");
+        dll.displayForward();
+        dll.displayBackward();
+
+        dll.insertFirst(5);
+        dll.insertLast(25);
+
+        System.out.println("After inserting 5 at the front and 25 at the back:");
+        dll.displayForward();
+        dll.displayBackward(); 
+
+        System.out.println("List size: " + dll.getSize()); // Output: List size: 4
+    }
 
 }
