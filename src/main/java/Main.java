@@ -95,7 +95,7 @@ public class Main {
 
         System.out.println("After inserting 5 at the front and 25 at the back:");
         dll.displayForward();
-        dll.displayBackward(); 
+        dll.displayBackward();
 
         System.out.println("List size: " + dll.getSize()); // Output: List size: 4
     }
