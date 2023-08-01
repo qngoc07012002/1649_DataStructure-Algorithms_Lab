@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args) {
 //        System.out.println("Main");
 //        methodA();
-        testCLL();
+  //      testCLL();
+        testQueue();
 
     }
 
@@ -58,27 +59,32 @@ public class Main {
 
     public static void testQueue(){
         Queue2<Integer> queueTest = new Queue2<Integer>();
+
+        // Offer 4 elements
         queueTest.offer(1);
         queueTest.offer(3);
         queueTest.offer(5);
         queueTest.offer(7);
-        System.out.println(queueTest);
+        Iterator<Integer> queueIterator = queueTest.iterator();
+        while (queueIterator.hasNext()){
+            System.out.println(queueIterator.next());
+        }
 
-        // Pop 2 element
-        System.out.println(queueTest.poll());
-        System.out.println(queueTest.poll());
+
+        System.out.println("Pop 2 Elements: ");
+        System.out.print(queueTest.poll() + " ");
+        System.out.print(queueTest.poll());
         System.out.println();
 
-        // Peek element
+        System.out.println("Peek Element");
         System.out.println(queueTest.peek());
         System.out.println();
 
-        // Check Empty
+        System.out.println("Check Empty: ");
         System.out.println(queueTest.isEmpty());
         System.out.println();
 
         // Iterator
-        Iterator<Integer> queueIterator = queueTest.iterator();
         while (queueIterator.hasNext()){
             System.out.println(queueIterator.next());
         }
