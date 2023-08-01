@@ -4,41 +4,54 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-      //  testStack();
-       // testQueue();
-        testDLL();
+        System.out.println("Main");
+        methodA();
     }
 
+    public static void methodA() {
+        System.out.println("MeThod A");
+        methodB();
+    }
+
+    public static void methodB() {
+        System.out.println("Method B");
+    }
+
+
+    //testStack();
+    // testQueue();
+    //  testDLL();
     public static void testStack(){
-        Stack2<Integer> stackTest = new Stack2<Integer>();
+        Stack<Integer> stackTest = new Stack<Integer>();
         stackTest.push(1);
         stackTest.push(3);
         stackTest.push(5);
         stackTest.push(7);
-        System.out.println(stackTest);
 
-        // Pop 2 element
+        // Pop 2 elements
+        System.out.println("Pop 2 Elements: ");
         System.out.println(stackTest.pop());
         System.out.println(stackTest.pop());
         System.out.println();
 
         // Peek element
+        System.out.println("Peek Element: ");
         System.out.println(stackTest.peek());
         System.out.println();
 
         // Check size
+        System.out.println("Check Size: ");
         System.out.println(stackTest.size());
         System.out.println();
 
         // Check Empty
+        System.out.println("Check Empty: ");
         System.out.println(stackTest.isEmpty());
         System.out.println();
 
-         // Iterator
-        Iterator<Integer> stackIterator = stackTest.iterator();
-        while (stackIterator.hasNext()){
-            System.out.println(stackIterator.next());
-        }
+         // Display
+        System.out.println("Display Stack: ");
+        System.out.println(stackTest);
     }
 
     public static void testQueue(){
