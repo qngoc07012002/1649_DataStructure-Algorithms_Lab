@@ -4,8 +4,10 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Main");
-        methodA();
+//        System.out.println("Main");
+//        methodA();
+        testCLL();
+
     }
 
     public static void methodA() {
@@ -113,4 +115,37 @@ public class Main {
         System.out.println("List size: " + dll.getSize()); // Output: List size: 4
     }
 
+
+    public static void testCLL(){
+        CircularLinkedList<Integer> list = new CircularLinkedList<>();
+
+        // Insert Element
+        list.insertFirst(10);
+        list.insertLast(20);
+        list.insertLast(30);
+        list.insertAfter(1, 25);
+
+        System.out.println("Display List: ");
+        list.display();
+
+        // Test the getNext method
+        System.out.println("First element: " + list.getNext());
+        System.out.println("Next element: " + list.getNext());
+        System.out.println("Next element: " + list.getNext());
+        System.out.println("Next element: " + list.getNext());
+        System.out.println("Next element: " + list.getNext());
+
+        // Remove elements
+        System.out.println("Remove First Element: ");
+        list.removeFirst();
+        list.display();
+
+        System.out.println("Remove Last Element: ");
+        list.removeLast();
+        list.display();
+
+        System.out.println("Remove At Index 0: ");
+        list.removeAtIndex(0);
+        list.display();
+    }
 }
