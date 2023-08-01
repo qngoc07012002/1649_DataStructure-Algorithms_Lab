@@ -36,19 +36,6 @@ public class DoublyLinkedList<E> {
         size++;
     }
 
-    public void insertLast(E data) {
-        Node<E> newNode = new Node<>(data);
-        if (isEmpty()) {
-            head = newNode;
-            tail = newNode;
-        } else {
-            tail.next = newNode;
-            newNode.prev = tail;
-            tail = newNode;
-        }
-        size++;
-    }
-
     public void insertAfter(Node<E> prevNode, E data) {
         if (prevNode == null) {
             System.out.println("Previous node cannot be null.");
@@ -61,7 +48,21 @@ public class DoublyLinkedList<E> {
         if (newNode.next != null)
             newNode.next.prev = newNode;
         else
-            tail = newNode; 
+            tail = newNode;
+        size++;
+    }
+
+
+    public void insertLast(E data) {
+        Node<E> newNode = new Node<>(data);
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
         size++;
     }
 
