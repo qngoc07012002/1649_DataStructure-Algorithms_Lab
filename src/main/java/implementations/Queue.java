@@ -90,13 +90,4 @@ public class Queue<E> implements AbstractQueue<E> {
         };
     }
 
-    @Override
-    public String toString() {
-        Node<E> temp = this.head;
-        while (temp != null) {
-            System.out.println(temp.element);
-            temp = temp.next;
-        }
-        return "";
-    }
 }
